@@ -30,7 +30,7 @@ import (
 	"strings"
 	"time"
 
-	"otter/pkg/pow"
+	"github.com/xiws/otter/pkg/pow"
 )
 
 // DeepSeek Web 接口路径。

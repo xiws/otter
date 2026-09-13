@@ -9,8 +9,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"otter/pkg/config"
-	"otter/pkg/provider"
+	"github.com/xiws/otter/pkg/config"
+	"github.com/xiws/otter/pkg/provider"
 )
 
 // newAuthCmd 创建认证管理命令组。

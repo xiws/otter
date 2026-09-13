@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"otter/pkg/cli"
+	"github.com/xiws/otter/pkg/cli"
 )
 
 func main() {

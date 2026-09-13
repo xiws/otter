@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"otter/pkg/config"
+	"github.com/xiws/otter/pkg/config"
 )
 
 var (

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"otter/pkg/api"
+	"github.com/xiws/otter/pkg/api"
 )
 
 // DeepSeekProvider 实现 DeepSeek 平台的 Provider 接口。

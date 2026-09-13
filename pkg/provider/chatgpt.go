@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"otter/pkg/api"
-	"otter/pkg/chrome"
+	"github.com/xiws/otter/pkg/api"
+	"github.com/xiws/otter/pkg/chrome"
 )
 
 // ChatGPTProvider 实现 ChatGPT 平台的 Provider 接口。

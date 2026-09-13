@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"otter/pkg/session"
+	"github.com/xiws/otter/pkg/session"
 )
 
 // newSessionCmd 创建会话管理命令组。

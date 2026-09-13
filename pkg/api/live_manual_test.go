@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"otter/pkg/chrome"
+	"github.com/xiws/otter/pkg/chrome"
 )
 
 // 手动实测（需 macOS + Chrome 已登录 + 设置 OTTER_LIVE_TEST=1）：

@@ -17,7 +17,7 @@ import (
 	fhttp "github.com/bogdanfinn/fhttp"
 	tls_client "github.com/bogdanfinn/tls-client"
 
-	"otter/pkg/chrome"
+	"github.com/xiws/otter/pkg/chrome"
 )
 
 // ChatGPT Web 接口路径。

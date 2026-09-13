@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"otter/pkg/config"
-	"otter/pkg/output"
-	"otter/pkg/provider"
-	"otter/pkg/session"
+	"github.com/xiws/otter/pkg/config"
+	"github.com/xiws/otter/pkg/output"
+	"github.com/xiws/otter/pkg/provider"
+	"github.com/xiws/otter/pkg/session"
 )
 
 // sendFlags 是发送消息子命令的通用 flags。
