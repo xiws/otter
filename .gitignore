@@ -30,3 +30,13 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+.orca
+
+# Build output
+/build/
+
+# otter user data directory (local credentials, sessions)
+.otter/
+.idea/
+.codewhale/
