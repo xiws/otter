@@ -1,10 +1,11 @@
-name: Go
+name: Build Latest
 
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -19,27 +20,35 @@ jobs:
         with:
           go-version: "1.26.7"
 
+      - name: Create dist
+        run: mkdir -p dist
+
       - name: Build Linux
         env:
           GOOS: linux
           GOARCH: amd64
-        run: go build -o dist/otter-linux-amd64 ./cmd/cli 
+        run: go build -o dist/otter-linux-amd64 ./cmd/orca
 
       - name: Build Windows
         env:
           GOOS: windows
           GOARCH: amd64
-        run: go build -o dist/otter-windows-amd64.exe ./cmd/cli
-
+        run: go build -o dist/otter-windows-amd64.exe ./cmd/orca
 
       - name: Build macOS
         env:
           GOOS: darwin
           GOARCH: amd64
-        run: go build -o dist/otter-darwin-amd64 ./cmd/cli
+        run: go build -o dist/otter-darwin-amd64 ./cmd/orca
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Update latest release
+        uses: softprops/action-gh-release@v2
         with:
-          name: go-builds
-          path: dist/
+          tag_name: latest
+          name: Latest Build
+          prerelease: true
+          make_latest: false
+          files: |
+            dist/otter-linux-amd64
+            dist/otter-windows-amd64.exe
+            dist/otter-darwin-amd64
