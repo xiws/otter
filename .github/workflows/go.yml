@@ -27,19 +27,19 @@ jobs:
         env:
           GOOS: linux
           GOARCH: amd64
-        run: go build -o dist/otter-linux-amd64 ./cmd/orca
+        run: go build -o dist/otter-linux-amd64 ./cmd/cli
 
       - name: Build Windows
         env:
           GOOS: windows
           GOARCH: amd64
-        run: go build -o dist/otter-windows-amd64.exe ./cmd/orca
+        run: go build -o dist/otter-windows-amd64.exe ./cmd/cli
 
       - name: Build macOS
         env:
           GOOS: darwin
           GOARCH: amd64
-        run: go build -o dist/otter-darwin-amd64 ./cmd/orca
+        run: go build -o dist/otter-darwin-amd64 ./cmd/cli
 
       - name: Update latest release
         uses: softprops/action-gh-release@v2
