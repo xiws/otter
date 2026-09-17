@@ -23,20 +23,20 @@ jobs:
         env:
           GOOS: linux
           GOARCH: amd64
-        run: go build -o dist/orca-linux-amd64 ./cmd/cli && go build -o dist/orca-tui-linux-amd64 ./cmd/tui
+        run: go build -o dist/orca-linux-amd64 ./cmd/cli 
 
       - name: Build Windows
         env:
           GOOS: windows
           GOARCH: amd64
-        run: go build -o dist/orca-windows-amd64.exe ./cmd/cli && go build -o dist/orca-tui-windows-amd64.exe ./cmd/tui
+        run: go build -o dist/orca-windows-amd64.exe ./cmd/cli
 
 
       - name: Build macOS
         env:
           GOOS: darwin
           GOARCH: amd64
-        run: go build -o dist/orca-darwin-amd64 ./cmd/cli&&go build -o dist/orca-tui-darwin-amd64 ./cmd/tui
+        run: go build -o dist/orca-darwin-amd64 ./cmd/cli
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
